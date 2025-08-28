@@ -1,10 +1,14 @@
-import "./globalStyle/globalStyle.scss"
+import Container from "./components/container/Container"
+import Header from "./components/header/Header"
+import "./globalStyle.scss"
 
 function App() {
 
   return (
     <>
-      <h1>Projeto em criação</h1>
+      <Container>
+        <Header />
+      </Container>
     </>
   )
 }
