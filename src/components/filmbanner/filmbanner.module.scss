@@ -1,0 +1,91 @@
+ .filmbanner {
+   width: 100%;
+   height: 586px;
+   background-color: #000;
+   background-image: url("../../assets/imgs/fundoWandinha.png");
+   background-repeat: no-repeat;
+   background-position: right;
+   display: flex;
+
+   section {
+     width: 50%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     padding-left: 60px;
+
+     h2 {
+       font-family: "Inter", sans-serif;
+       font-size: 20px;
+       font-weight: 400;
+       color: #fff;
+       margin-bottom: 20px;
+
+       span {
+         color: #fff;
+         background-color: #FF0707;
+         padding: 10px;
+         border-radius: 5px;
+       }
+     }
+   }
+ }
+
+ .logoImg {
+   max-width: 500px;
+   width: 100%;
+   margin-bottom: 20px;
+ }
+
+ .filmbanner section p {
+   font-family: "Inter", sans-serif;
+   font-size: 18px;
+   font-weight: 400;
+   color: #fff;
+   margin-bottom: 30px;
+   line-height: 1.5;
+   max-width: 500px;
+ }
+
+ .buttons {
+   display: flex;
+   align-items: center;
+   column-gap: 20px;
+ }
+
+ .playBtn,
+ .favoritarBtn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   column-gap: 20px;
+   height: 50px;
+   color: #000;
+   border: none;
+   border-radius: 5px;
+   font-size: 20px;
+   font-weight: 400;
+   cursor: pointer;
+ }
+ 
+ .playBtn {
+   width: 160px;
+   background-color: #35d7da;
+   transition: background-color 0.3s ease;
+   
+   &:hover {
+     background-color: #28a3a6;
+    }
+  }
+  
+  .favoritarBtn {
+    width: 300px;
+    background-color: #fff;
+  }
+
+ .imgButton {
+   margin-left: 10px;
+   width: 24px;
+   height: 24px;
+ }
