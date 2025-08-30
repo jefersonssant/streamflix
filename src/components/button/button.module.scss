@@ -1,0 +1,23 @@
+.button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: 400;
+  cursor: pointer;
+  
+    &:hover {
+    background-color: #28a3a6;
+    }
+      .imgButton {
+      margin-left: 10px;
+      width: 24px;
+      height: 24px;
+      background-color: transparent;
+    }
+
+}
