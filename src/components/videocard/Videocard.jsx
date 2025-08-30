@@ -1,10 +1,10 @@
 import Button from "../button/Button"
 import s from "./videocard.module.scss"
 
-function Videocard({ imagem, titulo, largura, altura, alturaCard, aoAssistir }) {
+function Videocard({ imagem, titulo, largura, minLagura, altura, alturaCardContainer, aoAssistir }) {
   return (
-    <section className={s.cardContainer} style={{height: alturaCard}}>
-      <img  className={s.imgFilme} style={{maxWidth: largura, height: altura}} src={imagem} alt="" />
+    <section className={s.cardContainer} style={{height: alturaCardContainer}}>
+      <img  className={s.imgFilme} style={{maxWidth: largura,minWidth: minLagura, height: altura}} src={imagem} alt="" />
       <h3>{titulo}</h3>
       <div>
         <Button

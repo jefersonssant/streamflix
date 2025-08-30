@@ -4,13 +4,16 @@
   margin-top: 30px;
   background-color: #000;
 
-    h2 {
-      color: #fff;
-    }
+  h2 {
+    color: #fff;
+  }
 }
+
+// #35d7da
 
 .filmesContainer {
   width: 100%;
+  min-height: 213px;
   display: flex;
   column-gap: 30px;
   margin-top: 20px;
@@ -20,3 +23,16 @@
   overflow-y: hidden;
   white-space: nowrap;
 }
+
+  .filmesContainer::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .filmesContainer::-webkit-scrollbar-track {
+    background: black;
+  }
+
+  .filmesContainer::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 4px;
+  }

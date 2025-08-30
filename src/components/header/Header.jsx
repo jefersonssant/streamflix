@@ -9,9 +9,10 @@ import minhaLista from "../../assets/icons/minhaLista.png"
 import logo from "../../assets/icons/logo.png"
 import configuracoes from "../../assets/icons/configuracoes.png"
 import Homepage from "../../pages/homepage/Homepage"
+import Filmspage from '../../pages/filmspage/Filmspage'
 
 
-function Header() {
+function Header({listaFilmes, filtrarAssistindo, funcAoAssistir}) {
   return (
     <BrowserRouter>
       <header className={s.header}>
@@ -26,12 +27,16 @@ function Header() {
               </Link>
             </li>
             <li>
-              <img src={filmes} alt="Imagem de ícone de navegação para página de filmes" />
-              <h3>Filmes</h3>
+              <Link to="/filmes">
+                <img src={filmes} alt="Imagem de ícone de navegação para página de filmes" />
+                <h3>Filmes</h3>
+              </Link>
             </li>
             <li>
-              <img src={series} alt="Imagem de ícone de navegação para página de séries." />
-              <h3>Séries</h3>
+              <Link to="*">
+                <img src={series} alt="Imagem de ícone de navegação para página de séries." />
+                <h3>Séries</h3>
+              </Link>
             </li>
             <li>
               <img src={minhaLista} alt="Imagem de ícone de navegação para meus favoritos." />
@@ -48,7 +53,17 @@ function Header() {
         </section>
       </header>
       <Routes>
-        <Route path="/" element={<Homepage/>} />
+        <Route path="/" 
+          element={<Homepage 
+            listaFilmes={listaFilmes} 
+            filtrarAssistindo={filtrarAssistindo}
+            funcAoAssistir={funcAoAssistir}
+          />} 
+        />
+        <Route path="/filmes" 
+          element={<Filmspage
+            listaFilmes={listaFilmes}
+        />} />
       </Routes>
     </BrowserRouter>
   )
