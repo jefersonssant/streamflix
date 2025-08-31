@@ -12,7 +12,9 @@ function Filmspage({ listaFilmes }) {
             imagem={filme.imagem}
             titulo={filme.titulo}
             largura="200px"
+            minLagura="200px"
             altura="auto"
+            larguraContainer="200px"
             alturaCardContainer="305px"
             aoAssistir={() => funcAoAssistir(filme)}
           />)}

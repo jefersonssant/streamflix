@@ -10,9 +10,10 @@ import logo from "../../assets/icons/logo.png"
 import configuracoes from "../../assets/icons/configuracoes.png"
 import Homepage from "../../pages/homepage/Homepage"
 import Filmspage from '../../pages/filmspage/Filmspage'
+import Minhalista from '../../pages/minhalista/Minhalista'
 
 
-function Header({listaFilmes, filtrarAssistindo, funcAoAssistir}) {
+function Header({listaFilmes, filtrarAssistindo, filtrarFavorito, funcAoAssistir, funcAoFavoritar}) {
   return (
     <BrowserRouter>
       <header className={s.header}>
@@ -39,8 +40,10 @@ function Header({listaFilmes, filtrarAssistindo, funcAoAssistir}) {
               </Link>
             </li>
             <li>
-              <img src={minhaLista} alt="Imagem de ícone de navegação para meus favoritos." />
-              <h3>Minha Lista</h3>
+              <Link to="/minhalista">
+                <img src={minhaLista} alt="Imagem de ícone de navegação para meus favoritos." />
+                <h3>Minha Lista</h3>
+              </Link>
             </li>
             <li>
               <img src={configuracoes} alt="Imagem de ícone de configurações." />
@@ -58,12 +61,19 @@ function Header({listaFilmes, filtrarAssistindo, funcAoAssistir}) {
             listaFilmes={listaFilmes} 
             filtrarAssistindo={filtrarAssistindo}
             funcAoAssistir={funcAoAssistir}
+            funcAoFavoritar={funcAoFavoritar}
           />} 
         />
         <Route path="/filmes" 
           element={<Filmspage
             listaFilmes={listaFilmes}
-        />} />
+            funcAoFavoritar={funcAoFavoritar}
+        />} 
+        />
+        <Route path="/minhalista" element={<Minhalista
+          aoFiltrarFavorito={filtrarFavorito}
+        />} 
+        />
       </Routes>
     </BrowserRouter>
   )

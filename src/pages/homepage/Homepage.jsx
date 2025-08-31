@@ -3,7 +3,7 @@ import Filmbanner from "../../components/filmbanner/Filmbanner"
 import Categoria from "../../components/categoria/Categoria"
 import Videocard from "../../components/videocard/Videocard"
 
-function Homepage({listaFilmes, filtrarAssistindo, funcAoAssistir}) {
+function Homepage({listaFilmes, filtrarAssistindo, funcAoAssistir, funcAoFavoritar}) {
 
   return (
     <main>
@@ -16,10 +16,10 @@ function Homepage({listaFilmes, filtrarAssistindo, funcAoAssistir}) {
               key={filme.id}
               imagem={filme.banner}
               titulo={filme.titulo}
-              largura="280px"
               minLagura="280px"
               altura="auto"
               alturaCardContainer="205px"
+              aoFavoritar={() => funcAoFavoritar(filme)} 
             />
           ))}
         </Categoria>
@@ -31,10 +31,12 @@ function Homepage({listaFilmes, filtrarAssistindo, funcAoAssistir}) {
             key={filme.id}
             imagem={filme.imagem} 
             titulo={filme.titulo} 
-            largura="200px" 
+            minLagura="200px" 
             altura="auto" 
             alturaCardContainer="305px" 
-            aoAssistir={() => funcAoAssistir(filme)} />
+            aoAssistir={() => funcAoAssistir(filme)}
+            aoFavoritar={() => funcAoFavoritar(filme)} 
+          />
         ))}
       </Categoria>
     </main>
