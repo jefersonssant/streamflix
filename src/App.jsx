@@ -1,4 +1,5 @@
 import Container from "./components/container/Container"
+import Footer from "./components/footer/Footer"
 import Header from "./components/header/Header"
 import "./globalStyle.scss"
 import { useState } from "react"
@@ -79,6 +80,7 @@ function App() {
           funcAoFavoritar={aoFavoritar}
      
         />
+        <Footer />
       </Container>
     </main>
   )
