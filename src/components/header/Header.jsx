@@ -11,6 +11,7 @@ import configuracoes from "../../assets/icons/configuracoes.png"
 import Homepage from "../../pages/homepage/Homepage"
 import Filmspage from '../../pages/filmspage/Filmspage'
 import Minhalista from '../../pages/minhalista/Minhalista'
+import Pagina404 from '../../pages/pagina404/Pagina404'
 
 
 function Header({listaFilmes, filtrarAssistindo, filtrarFavorito, funcAoAssistir, funcAoFavoritar}) {
@@ -55,6 +56,7 @@ function Header({listaFilmes, filtrarAssistindo, filtrarFavorito, funcAoAssistir
           <img src={logo} alt="Imagem de logomarca da empresa StreamFlix" />
         </section>
       </header>
+
       <Routes>
         <Route path="/" 
           element={<Homepage 
@@ -72,8 +74,9 @@ function Header({listaFilmes, filtrarAssistindo, filtrarFavorito, funcAoAssistir
         />
         <Route path="/minhalista" element={<Minhalista
           aoFiltrarFavorito={filtrarFavorito}
-        />} 
+        />}
         />
+        <Route path="*" element={<Pagina404/>}/>
       </Routes>
     </BrowserRouter>
   )
