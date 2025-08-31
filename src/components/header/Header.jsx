@@ -12,6 +12,7 @@ import Homepage from "../../pages/homepage/Homepage"
 import Filmspage from '../../pages/filmspage/Filmspage'
 import Minhalista from '../../pages/minhalista/Minhalista'
 import Pagina404 from '../../pages/pagina404/Pagina404'
+import Inserirfilme from '../../pages/inserirfilme/Inserirfilme'
 
 
 function Header({listaFilmes, filtrarAssistindo, filtrarFavorito, funcAoAssistir, funcAoFavoritar}) {
@@ -47,8 +48,10 @@ function Header({listaFilmes, filtrarAssistindo, filtrarFavorito, funcAoAssistir
               </Link>
             </li>
             <li>
-              <img src={configuracoes} alt="Imagem de ícone de configurações." />
-              <h3>Configurações</h3>
+              <Link to="/configuracoes">
+                <img src={configuracoes} alt="Imagem de ícone de configurações." />
+                <h3>Configurações</h3>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -76,6 +79,7 @@ function Header({listaFilmes, filtrarAssistindo, filtrarFavorito, funcAoAssistir
           aoFiltrarFavorito={filtrarFavorito}
         />}
         />
+        <Route path="/configuracoes" element={<Inserirfilme/>} />
         <Route path="*" element={<Pagina404/>}/>
       </Routes>
     </BrowserRouter>

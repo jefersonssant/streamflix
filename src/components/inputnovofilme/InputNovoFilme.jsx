@@ -1,8 +1,10 @@
 import s from "./inputnovofilme.module.scss"
 
-function InputNovoFilme({tipo, obrigatorio, placeholder}) {
+function InputNovoFilme({ nomeLabel, tipo, obrigatorio, placeholder, exemplificacao }) {
   return (
-    <input type={tipo}  required={obrigatorio} placeholder={placeholder}/>
+    <label>{nomeLabel}
+      <input className={s.input} type={tipo} required={obrigatorio} placeholder={placeholder} title={exemplificacao} />
+    </label>
   )
 }
 
