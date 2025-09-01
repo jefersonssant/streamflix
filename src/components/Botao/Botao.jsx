@@ -1,6 +1,6 @@
-import s from "./button.module.scss";
+import s from "./botao.module.scss";
 
-function Button({onClick, corFundo, largura, altura, tamanhoFonte, corFonte, imagem, imgBg, alt, nome }) {
+function Botao({onClick, corFundo, largura, altura, tamanhoFonte, corFonte, imagem, imgBg, alt, nome }) {
   return (
     <button
       onClick={onClick}
@@ -25,4 +25,4 @@ function Button({onClick, corFundo, largura, altura, tamanhoFonte, corFonte, ima
   )
 }
 
-export default Button
+export default Botao

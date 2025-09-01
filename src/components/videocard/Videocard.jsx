@@ -1,4 +1,4 @@
-import Button from "../button/Button"
+import Botao from "../Botao/Botao"
 import s from "./videocard.module.scss"
 
 function Videocard({ imagem, titulo, minLagura, altura, larguraContainer, alturaCardContainer, aoAssistir, aoFavoritar, eFavorito}) {
@@ -7,7 +7,7 @@ function Videocard({ imagem, titulo, minLagura, altura, larguraContainer, altura
       <img  className={s.imgFilme} style={{minWidth: minLagura, height: altura}} src={imagem} alt="" />
       <h3>{titulo}</h3>
       <div>
-        <Button
+        <Botao
           corFundo= "red"
           largura= "80px"
           altura= "25px"
@@ -17,7 +17,7 @@ function Videocard({ imagem, titulo, minLagura, altura, larguraContainer, altura
           onClick={aoAssistir}
         />
         {(!eFavorito) &&
-        (<Button 
+        (<Botao 
           corFundo= "white"
           largura= "100px"
           altura= "25px"

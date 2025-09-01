@@ -1,7 +1,5 @@
 import s from "./inserirfilme.module.scss"
-import Input from "../../components/inputnovofilme/InputNovoFilme"
 import InputNovoFilme from "../../components/inputnovofilme/InputNovoFilme"
-import Button from "../../components/button/Button"
 
 function Inserirfilme() {
   return (
