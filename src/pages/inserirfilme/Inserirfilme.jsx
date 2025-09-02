@@ -18,12 +18,15 @@ function Inserirfilme() {
         placeholder="Insira o título do filme"
       />
       <InputNovoFilme
-        nomeLabel="Insira a imagem do filme"
+        nomeLabel="Insira a imagem de capa do filme"
         tipo="text"
         obrigatorio={true}
         placeholder="Insira o link da imagem"
         exemplificacao={"Deve ser um link válido de uma imagem de filme, devendo ser imagem de capa"}
       />
+      <span>
+        Deve ser um link válido de uma imagem de filme, devendo ser imagem de capa.
+      </span>
       <InputNovoFilme
         nomeLabel="Insira imagem do banner do filme"
         tipo="text"
@@ -31,6 +34,9 @@ function Inserirfilme() {
         placeholder="Insira o link do banner"
         exemplificacao={"Deve ser um link válido de uma imagem de banner do filme, banner é em um formato mais retangular"}
       />
+      <span>
+        Deve ser um link válido de uma imagem de banner do filme, banner é em um formato mais retangular.
+      </span>
       <button type="submit">Inserir</button>
     </form>
   )
