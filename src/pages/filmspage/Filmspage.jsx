@@ -11,9 +11,8 @@ function Filmspage({ listaFilmes }) {
             key={filme.id}
             imagem={filme.imagem}
             titulo={filme.titulo}
-            largura="200px"
-            minLagura="200px"
-            altura="auto"
+            minLaguraImg="200px"
+            minAlturaImg="277.55px"
             larguraContainer="200px"
             alturaCardContainer="305px"
             aoAssistir={() => funcAoAssistir(filme)}

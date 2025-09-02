@@ -23,14 +23,14 @@ function Homepage({ listaFilmes, filtrarAssistindo, funcAoAssistir, funcAoFavori
       <Filmbanner />
 
       {filtrarAssistindo.length > 0 &&
-        (<Categoria titulo="Continuar Assistindo" altura="200px">
+        (<Categoria titulo="Continuar Assistindo" altura="230px">
           {filtrarAssistindo.map(filme => (
             <Videocard
               key={filme.id}
               imagem={filme.banner}
               titulo={filme.titulo}
-              minLagura="280px"
-              altura="auto"
+              minLaguraImg="280px"
+              minAlturaImg="163px"
               alturaCardContainer="205px"
               aoFavoritar={() => funcAoFavoritar(filme)}
             />
@@ -44,8 +44,8 @@ function Homepage({ listaFilmes, filtrarAssistindo, funcAoAssistir, funcAoFavori
               key={filme.id}
               imagem={filme.imagem}
               titulo={filme.titulo}
-              minLagura="200px"
-              altura="auto"
+              minLaguraImg="200px"
+              minAlturaImg="277.55px"
               alturaCardContainer="305px"
               aoAssistir={() => funcAoAssistir(filme)}
               aoFavoritar={() => funcAoFavoritar(filme)}
@@ -60,8 +60,8 @@ function Homepage({ listaFilmes, filtrarAssistindo, funcAoAssistir, funcAoFavori
               key={filme.id}
               imagem={filme.imagem}
               titulo={filme.titulo}
-              minLagura="200px"
-              altura="auto"
+              minLaguraImg="200px"
+              minAlturaImg="277.55px"
               alturaCardContainer="305px"
               aoAssistir={() => funcAoAssistir(filme)}
               aoFavoritar={() => funcAoFavoritar(filme)}
@@ -76,8 +76,8 @@ function Homepage({ listaFilmes, filtrarAssistindo, funcAoAssistir, funcAoFavori
               key={filme.id}
               imagem={filme.imagem}
               titulo={filme.titulo}
-              minLagura="200px"
-              altura="auto"
+              minLaguraImg="200px"
+              minAlturaImg="277.55px"
               alturaCardContainer="305px"
               aoAssistir={() => funcAoAssistir(filme)}
               aoFavoritar={() => funcAoFavoritar(filme)}
