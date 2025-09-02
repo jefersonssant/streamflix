@@ -9,7 +9,7 @@ function Inserirfilme() {
       <select id="categoria">
         <option value="Filmes de Terror">Filmes de Terror</option>
         <option value="Filmes de Ação">Filmes de Ação</option>
-        <option value="Filmes de Ficção">Filmes de Ação</option>
+        <option value="Filmes de Ficção">Filmes de Ficção</option>
       </select>
       <InputNovoFilme
         nomeLabel="Título do Filme"
