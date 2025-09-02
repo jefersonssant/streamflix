@@ -19,7 +19,7 @@ function Videocard({ imagem, titulo, minLaguraImg, minAlturaImg, larguraContaine
           nome= "Assistir"
           onClick={aoAssistir}
         />
-        
+
         {(!eFavorito) &&
         (<Botao 
           corFundo= "white"
