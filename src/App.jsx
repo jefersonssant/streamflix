@@ -6,7 +6,11 @@ import { useState, useEffect, use } from "react"
 import axios from "axios"
 
 function App() {
-
+  
+  const [listaFilmes, setListaFilmes] = useState([])
+  const [assistindo, setAssistindo] = useState([])
+  const [favoritoMinhaLista, setFavoritoMinhaLista] = useState([])
+  
   const getFilmes = async () => {
     try {
       const responsta = await axios.get("https://api-streamflix.onrender.com/api/filmes")
@@ -19,11 +23,6 @@ function App() {
   useEffect(() => {
     getFilmes()
   }, [])
-
-  const [listaFilmes, setListaFilmes] = useState([])
-  const [assistindo, setAssistindo] = useState([])
-  const [favoritoMinhaLista, setFavoritoMinhaLista] = useState([])
-
 
   const aoAssistir = (filmes) => {
     if (!assistindo.find(f => f.id === filmes.id)) {
