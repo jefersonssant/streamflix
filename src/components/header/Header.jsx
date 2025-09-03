@@ -132,12 +132,15 @@ function Header({ listaFilmes, filtrarAssistindo, filtrarFavorito, funcAoAssisti
             funcAoFavoritar={funcAoFavoritar}
           />}
         />
-        <Route path="/minhalista" element={<Minhalista
-          aoFiltrarFavorito={filtrarFavorito}
-        />}
+        <Route path="/minhalista"
+          element={<Minhalista
+            aoFiltrarFavorito={filtrarFavorito}
+          />}
         />
-        <Route path="/configuracoes" element={<Inserirfilme />} />
-        <Route path="*" element={<Pagina404 />} />
+        <Route path="/configuracoes"
+          element={<Inserirfilme />} />
+        <Route path="*"
+          element={<Pagina404 />} />
       </Routes>
     </BrowserRouter>
   )

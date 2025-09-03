@@ -10,34 +10,30 @@ function Filmbanner() {
 
   const [larguraButtonAssistir, setLarguraButtonAssistir] = useState()
   const [larguraButtonFavorito, setLarguraButtonFavorito] = useState()
-  const [tamanhoFonteButton, setTamanhoFonteButton] = useState()
   const [nomeFavorito, setNomeFavorito] = useState()
-  const alterarLarguraNomeETamanhoFonteButtons = () => {
+
+  const alterarLarguraNomeButtons = () => {
     if(window.innerWidth <= 768) {
       setNomeFavorito("Favoritar");
-      setTamanhoFonteButton("16px");
     }
     else if (window.innerWidth <= 425) {
       setLarguraButtonAssistir("50%");
       setLarguraButtonFavorito("50%");
-      setTamanhoFonteButton("14px");
     } else {
       setLarguraButtonAssistir("160px");
       setLarguraButtonFavorito("333px");
-      setTamanhoFonteButton("16px");
       setNomeFavorito("Adicionar Aos Favoritos");
     }
   };
 
   useEffect(() => {
     alterarLarguraNomeETamanhoFonteButtons();
-    window.addEventListener("resize", alterarLarguraNomeETamanhoFonteButtons);
-
-    window.addEventListener("load", alterarLarguraNomeETamanhoFonteButtons);
+    window.addEventListener("resize", alterarLarguraNomeButtons);
+    window.addEventListener("load", alterarLarguraNomeButtons);
 
     return () => {
-     window.removeEventListener("resize", alterarLarguraNomeETamanhoFonteButtons);
-     window.removeEventListener("load", alterarLarguraNomeETamanhoFonteButtons)
+     window.removeEventListener("resize", alterarLarguraNomeButtons);
+     window.removeEventListener("load", alterarLarguraNomeButtons)
     }
 
 ;
@@ -54,7 +50,7 @@ function Filmbanner() {
             corFundo="#35d7da"
             largura={larguraButtonAssistir}
             altura="50px"
-            tamanhoFonte={tamanhoFonteButton}
+            tamanhoFonte="100%"
             imagem={playIcon}
             alt="Imagem de ícone de dar play no filme."
             nome="Assistir"
@@ -63,7 +59,7 @@ function Filmbanner() {
             corFundo="#fff"
             largura={larguraButtonFavorito}
             altura="50px"
-            tamanhoFonte={tamanhoFonteButton}
+            tamanhoFonte="100%"
             imagem={favoritadoIcon}
             alt="Imagem de ícone de fsvotitar filme."
             nome={nomeFavorito}
