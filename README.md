@@ -38,11 +38,11 @@ npm run dev
 ```
 ## Tecnologias e dependências utilizadas
 
-*<img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
-*<img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React.js">
-*<img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" alt="React Router">
-*<img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white" alt="SCSS SASS">
-*<img src="https://img.shields.io/badge/Axios-%2320232a.svg?style=for-the-badge&logo=Axios&logoColor=%2361DAFB" alt="Axios">
+* <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
+* <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React.js">
+* <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" alt="React Router">
+* <img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white" alt="SCSS SASS">
+* <img src="https://img.shields.io/badge/Axios-%2320232a.svg?style=for-the-badge&logo=Axios&logoColor=%2361DAFB" alt="Axios">
 
 ## Imagem do Projeto
 <img width="1920" height="2923" alt="screencapture-localhost-5173-2025-09-03-10_25_07" src="https://github.com/user-attachments/assets/744e6441-22ec-46dc-87e6-90cb633f03b6" />
