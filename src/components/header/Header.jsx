@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import s from "./Header.module.scss"
+import s from "./header.module.scss"
 import perfilIcon from "../../assets/icons/Perfil.png"
 import searchIcon from "../../assets/icons/lupa.png"
 import inicio from "../../assets/icons/inicio.png"
