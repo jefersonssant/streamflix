@@ -5,16 +5,16 @@ import searchIcon from "../../assets/icons/Lupa.png"
 import inicio from "../../assets/icons/inicio.png"
 import filmes from "../../assets/icons/filmes.png"
 import series from "../../assets/icons/series.png"
-import minhaLista from "../../assets/icons/minhaLista.png"
+import minhaLista from "../../assets/icons/minhalista.png"
 import logo from "../../assets/icons/Logo.png"
 import configuracoes from "../../assets/icons/configuracoes.png"
+
 import Homepage from "../../pages/homepage/Homepage"
 import Filmspage from '../../pages/filmspage/Filmspage'
 import Minhalista from '../../pages/minhalista/Minhalista'
 import Pagina404 from '../../pages/pagina404/Pagina404'
 import Inserirfilme from '../../pages/inserirfilme/Inserirfilme'
 import { useState, useEffect } from 'react'
-
 
 function Header({ listaFilmes, atualizarLista, filtrarAssistindo, filtrarFavorito, funcAoAssistir, funcAoFavoritar }) {
 
