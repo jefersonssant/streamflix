@@ -3,7 +3,7 @@ import InputNovoFilme from "../../components/inputnovofilme/InputNovoFilme"
 import {useState} from "react"
 import axios from "axios";
 
-function Inserirfilme() {
+function Inserirfilme({atualizarLista}) {
 
   const [categoria, setCategoria] = useState("");
   const [titulo, setTitulo] = useState();
@@ -40,6 +40,11 @@ function Inserirfilme() {
     try {
       await axios.post("https://api-streamflix.onrender.com/api/filmes", filme)
       alert("Filme cadastrado com sucesso!")
+      atualizarLista();
+      setCategoria("");
+      setTitulo("");
+      setImagem("");
+      setBanner("");  
       console.log("Filme cadastrado com sucesso!"); 
     } catch (error) {
       alert("Erro ao cadastrar o filme, tente novamente mais tarde.")

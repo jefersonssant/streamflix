@@ -16,7 +16,7 @@ import Inserirfilme from '../../pages/inserirfilme/Inserirfilme'
 import { useState, useEffect } from 'react'
 
 
-function Header({ listaFilmes, filtrarAssistindo, filtrarFavorito, funcAoAssistir, funcAoFavoritar }) {
+function Header({ listaFilmes, atualizarLista, filtrarAssistindo, filtrarFavorito, funcAoAssistir, funcAoFavoritar }) {
 
   const [menuAberto, setMenuAberto] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -138,7 +138,8 @@ function Header({ listaFilmes, filtrarAssistindo, filtrarFavorito, funcAoAssisti
           />}
         />
         <Route path="/configuracoes"
-          element={<Inserirfilme />} />
+          element={<Inserirfilme 
+          atualizarLista={atualizarLista}/>} />
         <Route path="*"
           element={<Pagina404 />} />
       </Routes>

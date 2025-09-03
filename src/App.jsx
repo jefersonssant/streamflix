@@ -40,7 +40,8 @@ function App() {
     <main>
       <Container>
         <Header 
-          listaFilmes={listaFilmes} 
+          listaFilmes={listaFilmes}
+          atualizarLista={getFilmes} 
           funcAoAssistir={aoAssistir}
           filtrarAssistindo={assistindo}
           filtrarFavorito={favoritoMinhaLista} 
