@@ -128,6 +128,7 @@ function Header({ listaFilmes, filtrarAssistindo, filtrarFavorito, funcAoAssisti
         <Route path="/filmes"
           element={<Filmspage
             listaFilmes={listaFilmes}
+            funcAoAssistir={funcAoAssistir}
             funcAoFavoritar={funcAoFavoritar}
           />}
         />

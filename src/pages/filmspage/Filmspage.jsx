@@ -1,7 +1,7 @@
 import Videocard from "../../components/videocard/Videocard"
 import s from "./filmpage.module.scss"
 
-function Filmspage({ listaFilmes }) {
+function Filmspage({ listaFilmes, funcAoAssistir, funcAoFavoritar }) {
   return (
     <>
       <h1 className={s.tituloFilmes}>Veja todos os filmes aqui</h1>
@@ -16,6 +16,7 @@ function Filmspage({ listaFilmes }) {
             larguraContainer="200px"
             alturaCardContainer="305px"
             aoAssistir={() => funcAoAssistir(filme)}
+            aoFavoritar={() => funcAoFavoritar(filme)}
           />)}
       </main>
     </>
