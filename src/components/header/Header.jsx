@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import s from "./header.module.scss"
 import perfilIcon from "../../assets/icons/Perfil.png"
-import searchIcon from "../../assets/icons/lupa.png"
+import searchIcon from "../../assets/icons/Lupa.png"
 import inicio from "../../assets/icons/inicio.png"
 import filmes from "../../assets/icons/filmes.png"
 import series from "../../assets/icons/series.png"
 import minhaLista from "../../assets/icons/minhaLista.png"
-import logo from "../../assets/icons/logo.png"
+import logo from "../../assets/icons/Logo.png"
 import configuracoes from "../../assets/icons/configuracoes.png"
 import Homepage from "../../pages/homepage/Homepage"
 import Filmspage from '../../pages/filmspage/Filmspage'
