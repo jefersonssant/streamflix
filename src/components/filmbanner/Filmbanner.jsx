@@ -27,7 +27,7 @@ function Filmbanner() {
   };
 
   useEffect(() => {
-    alterarLarguraNomeETamanhoFonteButtons();
+    alterarLarguraNomeButtons();
     window.addEventListener("resize", alterarLarguraNomeButtons);
     window.addEventListener("load", alterarLarguraNomeButtons);
 
