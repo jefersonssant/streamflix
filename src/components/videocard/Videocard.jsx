@@ -1,7 +1,7 @@
 import Botao from "../Botao/Botao"
 import s from "./videocard.module.scss"
 
-function Videocard({ imagem, titulo, minLaguraImg, minAlturaImg, larguraContainer, alturaCardContainer, aoAssistir, aoFavoritar, eFavorito}) {
+function Videocard({ imagem, titulo, minLaguraImg, minAlturaImg, larguraContainer, alturaCardContainer, aoAssistir, aoFavoritar, aoRemover, eFavorito}) {
   return (
     <section className={s.cardContainer} style={{width: larguraContainer, height: alturaCardContainer}}>
 
@@ -29,6 +29,19 @@ function Videocard({ imagem, titulo, minLaguraImg, minAlturaImg, larguraContaine
           corFonte= "black"
           nome= "+ Minha lista"
           onClick={aoFavoritar}
+        />)
+        }
+
+        
+        {(eFavorito) &&
+        (<Botao 
+          corFundo= "white"
+          largura= "100px"
+          altura= "25px"
+          tamanhoFonte="12px"
+          corFonte= "black"
+          nome= "Remover"
+          onClick={aoRemover}
         />)
         }
       </div>

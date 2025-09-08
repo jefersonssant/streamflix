@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import s from "./header.module.scss"
 import perfilIcon from "../../assets/icons/Perfil.png"
 import searchIcon from "../../assets/icons/Lupa.png"
@@ -9,14 +9,9 @@ import minhaLista from "../../assets/icons/minhalista.png"
 import logo from "../../assets/icons/Logo.png"
 import configuracoes from "../../assets/icons/configuracoes.png"
 
-import Homepage from "../../pages/homepage/Homepage"
-import Filmspage from '../../pages/filmspage/Filmspage'
-import Minhalista from '../../pages/minhalista/Minhalista'
-import Pagina404 from '../../pages/pagina404/Pagina404'
-import Inserirfilme from '../../pages/inserirfilme/Inserirfilme'
 import { useState, useEffect } from 'react'
 
-function Header({ listaFilmes, atualizarLista, filtrarAssistindo, filtrarFavorito, funcAoAssistir, funcAoFavoritar }) {
+function Header() {
 
   const [menuAberto, setMenuAberto] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -33,7 +28,6 @@ function Header({ listaFilmes, atualizarLista, filtrarAssistindo, filtrarFavorit
   }, []);
 
   return (
-    <BrowserRouter>
       <header className={s.header}>
         {!isMobile && (
           <nav>
@@ -115,35 +109,6 @@ function Header({ listaFilmes, atualizarLista, filtrarAssistindo, filtrarFavorit
           <img src={logo} alt="Imagem de logomarca da empresa StreamFlix" />
         </section>
       </header>
-
-      <Routes>
-        <Route path="/"
-          element={<Homepage
-            listaFilmes={listaFilmes}
-            filtrarAssistindo={filtrarAssistindo}
-            funcAoAssistir={funcAoAssistir}
-            funcAoFavoritar={funcAoFavoritar}
-          />}
-        />
-        <Route path="/filmes"
-          element={<Filmspage
-            listaFilmes={listaFilmes}
-            funcAoAssistir={funcAoAssistir}
-            funcAoFavoritar={funcAoFavoritar}
-          />}
-        />
-        <Route path="/minhalista"
-          element={<Minhalista
-            aoFiltrarFavorito={filtrarFavorito}
-          />}
-        />
-        <Route path="/configuracoes"
-          element={<Inserirfilme 
-          atualizarLista={atualizarLista}/>} />
-        <Route path="*"
-          element={<Pagina404 />} />
-      </Routes>
-    </BrowserRouter>
   )
 }
 
